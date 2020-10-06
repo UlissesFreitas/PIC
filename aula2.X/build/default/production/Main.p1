@@ -1,0 +1,78 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"498 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f84a.h
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"210
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+[v F212 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF212 ~T0 @X0 0 e ]
+[p i __delay ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f84a.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"212
+[; <" PORTB equ 06h ;# ">
+"274
+[; <" EEDATA equ 08h ;# ">
+"281
+[; <" EEADR equ 09h ;# ">
+"288
+[; <" PCLATH equ 0Ah ;# ">
+"308
+[; <" INTCON equ 0Bh ;# ">
+"386
+[; <" OPTION_REG equ 081h ;# ">
+"456
+[; <" TRISA equ 085h ;# ">
+"500
+[; <" TRISB equ 086h ;# ">
+"562
+[; <" EECON1 equ 088h ;# ">
+"606
+[; <" EECON2 equ 089h ;# ">
+[v $root$_main `(v ~T0 @X0 0 e ]
+"13 Main.c
+[; ;Main.c: 13: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"15
+[; ;Main.c: 15:     TRISB = 0b00000000;
+[e = _TRISB -> -> 0 `i `uc ]
+"16
+[; ;Main.c: 16:     PORTB = 0b00000000;
+[e = _PORTB -> -> 0 `i `uc ]
+"18
+[; ;Main.c: 18:     while(1){
+[e :U 25 ]
+{
+"19
+[; ;Main.c: 19:         PORTB++;
+[e ++ _PORTB -> -> 1 `i `Vuc ]
+"20
+[; ;Main.c: 20:         _delay((unsigned long)((200)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"21
+[; ;Main.c: 21:     }
+}
+[e :U 24 ]
+[e $U 25  ]
+[e :U 26 ]
+"23
+[; ;Main.c: 23:     return;
+[e $UE 23  ]
+"24
+[; ;Main.c: 24: }
+[e :UE 23 ]
+}

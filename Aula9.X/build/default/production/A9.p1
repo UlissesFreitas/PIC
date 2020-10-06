@@ -1,0 +1,200 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"767 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC16f628A.h
+[v _CMCON `Vuc ~T0 @X0 0 e@31 ]
+"907
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"969
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"166
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"228
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+"75 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdlib.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdlib.h: 75: extern int rand(void);
+[v _rand `(i ~T0 @X0 0 ef ]
+"172 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC16f628A.h
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"171
+[u S9 `S10 1 ]
+[n S9 . . ]
+"183
+[v _PORTAbits `VS9 ~T0 @X0 0 e@5 ]
+[v F586 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF586 ~T0 @X0 0 e ]
+[p i __delay ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC16f628A.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"230
+[; <" PORTB equ 06h ;# ">
+"292
+[; <" PCLATH equ 0Ah ;# ">
+"312
+[; <" INTCON equ 0Bh ;# ">
+"390
+[; <" PIR1 equ 0Ch ;# ">
+"447
+[; <" TMR1 equ 0Eh ;# ">
+"454
+[; <" TMR1L equ 0Eh ;# ">
+"461
+[; <" TMR1H equ 0Fh ;# ">
+"468
+[; <" T1CON equ 010h ;# ">
+"527
+[; <" TMR2 equ 011h ;# ">
+"534
+[; <" T2CON equ 012h ;# ">
+"605
+[; <" CCPR1 equ 015h ;# ">
+"612
+[; <" CCPR1L equ 015h ;# ">
+"619
+[; <" CCPR1H equ 016h ;# ">
+"626
+[; <" CCP1CON equ 017h ;# ">
+"684
+[; <" RCSTA equ 018h ;# ">
+"755
+[; <" TXREG equ 019h ;# ">
+"762
+[; <" RCREG equ 01Ah ;# ">
+"769
+[; <" CMCON equ 01Fh ;# ">
+"839
+[; <" OPTION_REG equ 081h ;# ">
+"909
+[; <" TRISA equ 085h ;# ">
+"971
+[; <" TRISB equ 086h ;# ">
+"1033
+[; <" PIE1 equ 08Ch ;# ">
+"1090
+[; <" PCON equ 08Eh ;# ">
+"1139
+[; <" PR2 equ 092h ;# ">
+"1146
+[; <" TXSTA equ 098h ;# ">
+"1203
+[; <" SPBRG equ 099h ;# ">
+"1210
+[; <" EEDATA equ 09Ah ;# ">
+"1217
+[; <" EEADR equ 09Bh ;# ">
+"1224
+[; <" EECON1 equ 09Ch ;# ">
+"1262
+[; <" EECON2 equ 09Dh ;# ">
+"1269
+[; <" VRCON equ 09Fh ;# ">
+"19 A9.c
+[; ;A9.c: 19: 
+[p x FOSC = EXTRCCLK ]
+"20
+[; ;A9.c: 20:         }
+[p x WDTE = OFF ]
+"21
+[; ;A9.c: 21: 
+[p x PWRTE = OFF ]
+"22
+[; ;A9.c: 22:         while(PORTAbits.RA3){
+[p x MCLRE = ON ]
+"23
+[; ;A9.c: 23:             if(PORTAbits.RA1 == 0) PORTAbits.RA3 = 0;
+[p x BOREN = ON ]
+"24
+[; ;A9.c: 24:             _delay((unsigned long)((70)*(4000000/4000.0)));
+[p x LVP = ON ]
+"25
+[; ;A9.c: 25: 
+[p x CPD = OFF ]
+"26
+[; ;A9.c: 26:         }
+[p x CP = OFF ]
+"28
+[; ;A9.c: 28:         _delay((unsigned long)((500)*(4000000/4000.0)));
+[v _numbers `i ~T0 @X0 1 e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"30
+[; ;A9.c: 30: 
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"31
+[; ;A9.c: 31: 
+[e = _CMCON -> -> 7 `i `uc ]
+"33
+[; ;A9.c: 33: }
+[e = _TRISA -> -> 3 `i `uc ]
+"34
+[e = _TRISB -> -> 0 `i `uc ]
+"36
+[e = _PORTA -> -> 3 `i `uc ]
+"37
+[e = _PORTB -> -> 0 `i `uc ]
+"39
+[e :U 57 ]
+{
+"40
+[e = _numbers ( _rand ..  ]
+"41
+[e = . . _PORTAbits 0 2 -> _numbers `uc ]
+"42
+[e = . . _PORTAbits 0 3 -> ~ -> . . _PORTAbits 0 3 `i `uc ]
+"44
+[e $U 59  ]
+[e :U 60 ]
+{
+"45
+[e $ ! == -> . . _PORTAbits 0 0 `i -> 0 `i 62  ]
+[e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
+[e :U 62 ]
+"46
+[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"48
+}
+[e :U 59 ]
+"44
+[e $ != -> . . _PORTAbits 0 2 `i -> 0 `i 60  ]
+[e :U 61 ]
+"50
+[e $U 63  ]
+[e :U 64 ]
+{
+"51
+[e $ ! == -> . . _PORTAbits 0 1 `i -> 0 `i 66  ]
+[e = . . _PORTAbits 0 3 -> -> 0 `i `uc ]
+[e :U 66 ]
+"52
+[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"54
+}
+[e :U 63 ]
+"50
+[e $ != -> . . _PORTAbits 0 3 `i -> 0 `i 64  ]
+[e :U 65 ]
+"56
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"57
+}
+[e :U 56 ]
+[e $U 57  ]
+[e :U 58 ]
+"60
+[e $UE 55  ]
+"61
+[e :UE 55 ]
+}

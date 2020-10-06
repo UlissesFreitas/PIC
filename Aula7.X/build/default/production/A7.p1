@@ -1,0 +1,134 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"969 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC16f628A.h
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"228
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
+[v F461 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF461 ~T0 @X0 0 e ]
+[p i __delay ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC16f628A.h
+[; <" INDF equ 00h ;# ">
+"61
+[; <" TMR0 equ 01h ;# ">
+"68
+[; <" PCL equ 02h ;# ">
+"75
+[; <" STATUS equ 03h ;# ">
+"161
+[; <" FSR equ 04h ;# ">
+"168
+[; <" PORTA equ 05h ;# ">
+"230
+[; <" PORTB equ 06h ;# ">
+"292
+[; <" PCLATH equ 0Ah ;# ">
+"312
+[; <" INTCON equ 0Bh ;# ">
+"390
+[; <" PIR1 equ 0Ch ;# ">
+"447
+[; <" TMR1 equ 0Eh ;# ">
+"454
+[; <" TMR1L equ 0Eh ;# ">
+"461
+[; <" TMR1H equ 0Fh ;# ">
+"468
+[; <" T1CON equ 010h ;# ">
+"527
+[; <" TMR2 equ 011h ;# ">
+"534
+[; <" T2CON equ 012h ;# ">
+"605
+[; <" CCPR1 equ 015h ;# ">
+"612
+[; <" CCPR1L equ 015h ;# ">
+"619
+[; <" CCPR1H equ 016h ;# ">
+"626
+[; <" CCP1CON equ 017h ;# ">
+"684
+[; <" RCSTA equ 018h ;# ">
+"755
+[; <" TXREG equ 019h ;# ">
+"762
+[; <" RCREG equ 01Ah ;# ">
+"769
+[; <" CMCON equ 01Fh ;# ">
+"839
+[; <" OPTION_REG equ 081h ;# ">
+"909
+[; <" TRISA equ 085h ;# ">
+"971
+[; <" TRISB equ 086h ;# ">
+"1033
+[; <" PIE1 equ 08Ch ;# ">
+"1090
+[; <" PCON equ 08Eh ;# ">
+"1139
+[; <" PR2 equ 092h ;# ">
+"1146
+[; <" TXSTA equ 098h ;# ">
+"1203
+[; <" SPBRG equ 099h ;# ">
+"1210
+[; <" EEDATA equ 09Ah ;# ">
+"1217
+[; <" EEADR equ 09Bh ;# ">
+"1224
+[; <" EECON1 equ 09Ch ;# ">
+"1262
+[; <" EECON2 equ 09Dh ;# ">
+"1269
+[; <" VRCON equ 09Fh ;# ">
+"14 A7.c
+[; ;A7.c: 14: int cont = 0xFF;
+[v _cont `i ~T0 @X0 1 e ]
+[i _cont
+-> 255 `i
+]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"16
+[; ;A7.c: 16: void main(void) {
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"19
+[; ;A7.c: 19:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
+"20
+[; ;A7.c: 20:     PORTB = 0xFF;
+[e = _PORTB -> -> 255 `i `uc ]
+"22
+[; ;A7.c: 22:     while(1){
+[e :U 53 ]
+{
+"23
+[; ;A7.c: 23:         PORTB = cont;
+[e = _PORTB -> _cont `uc ]
+"24
+[; ;A7.c: 24:         _delay((unsigned long)((300)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"25
+[; ;A7.c: 25:         cont = cont << 1;
+[e = _cont << _cont -> 1 `i ]
+"27
+[; ;A7.c: 27:         if(cont == 0) cont = 0xFF;
+[e $ ! == _cont -> 0 `i 55  ]
+[e = _cont -> 255 `i ]
+[e :U 55 ]
+"29
+[; ;A7.c: 29:     }
+}
+[e :U 52 ]
+[e $U 53  ]
+[e :U 54 ]
+"30
+[; ;A7.c: 30:     return;
+[e $UE 51  ]
+"31
+[; ;A7.c: 31: }
+[e :UE 51 ]
+}

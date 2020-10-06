@@ -1,0 +1,175 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[p mainexit ]
+"1404 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC12f675.h
+[v _ANSEL `Vuc ~T0 @X0 0 e@159 ]
+"564
+[v _CMCON `Vuc ~T0 @X0 0 e@25 ]
+"803
+[s S45 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S45 . TRISIO0 TRISIO1 TRISIO2 TRISIO3 TRISIO4 TRISIO5 ]
+"802
+[u S44 `S45 1 ]
+[n S44 . . ]
+"812
+[v _TRISIObits `VS44 ~T0 @X0 0 e@133 ]
+"224
+[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S14 . GP0 GP1 GP2 GP3 GP4 GP5 ]
+"232
+[s S15 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S15 . GPIO0 GPIO1 GPIO2 GPIO3 GPIO4 GPIO5 ]
+"223
+[u S13 `S14 1 `S15 1 ]
+[n S13 . . . ]
+"241
+[v _GPIObits `VS13 ~T0 @X0 0 e@5 ]
+[v F537 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF537 ~T0 @X0 0 e ]
+[p i __delay ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\PIC12f675.h
+[; <" INDF equ 00h ;# ">
+"74
+[; <" TMR0 equ 01h ;# ">
+"94
+[; <" PCL equ 02h ;# ">
+"114
+[; <" STATUS equ 03h ;# ">
+"200
+[; <" FSR equ 04h ;# ">
+"220
+[; <" GPIO equ 05h ;# ">
+"308
+[; <" PCLATH equ 0Ah ;# ">
+"328
+[; <" INTCON equ 0Bh ;# ">
+"406
+[; <" PIR1 equ 0Ch ;# ">
+"454
+[; <" TMR1 equ 0Eh ;# ">
+"461
+[; <" TMR1L equ 0Eh ;# ">
+"481
+[; <" TMR1H equ 0Fh ;# ">
+"501
+[; <" T1CON equ 010h ;# ">
+"566
+[; <" CMCON equ 019h ;# ">
+"625
+[; <" ADRESH equ 01Eh ;# ">
+"645
+[; <" ADCON0 equ 01Fh ;# ">
+"729
+[; <" OPTION_REG equ 081h ;# ">
+"799
+[; <" TRISIO equ 085h ;# ">
+"849
+[; <" PIE1 equ 08Ch ;# ">
+"897
+[; <" PCON equ 08Eh ;# ">
+"931
+[; <" OSCCAL equ 090h ;# ">
+"991
+[; <" WPU equ 095h ;# ">
+"1036
+[; <" IOC equ 096h ;# ">
+"1041
+[; <" IOCB equ 096h ;# ">
+"1210
+[; <" VRCON equ 099h ;# ">
+"1270
+[; <" EEDATA equ 09Ah ;# ">
+"1275
+[; <" EEDAT equ 09Ah ;# ">
+"1308
+[; <" EEADR equ 09Bh ;# ">
+"1328
+[; <" EECON1 equ 09Ch ;# ">
+"1366
+[; <" EECON2 equ 09Dh ;# ">
+"1386
+[; <" ADRESL equ 09Eh ;# ">
+"1406
+[; <" ANSEL equ 09Fh ;# ">
+"18 A6.c
+[; ;A6.c: 18:            _delay((unsigned long)((300)*(4000000/4000.0)));
+[p x FOSC = INTRCIO ]
+"19
+[; ;A6.c: 19:         }
+[p x WDTE = OFF ]
+"20
+[; ;A6.c: 20:         if(GPIObits.GP1 == 0){
+[p x PWRTE = OFF ]
+"21
+[; ;A6.c: 21:             GPIObits.GP5 = ~GPIObits.GP5;
+[p x MCLRE = OFF ]
+"22
+[; ;A6.c: 22:             _delay((unsigned long)((300)*(4000000/4000.0)));
+[p x BOREN = OFF ]
+"23
+[; ;A6.c: 23:         }
+[p x CP = OFF ]
+"24
+[; ;A6.c: 24: 
+[p x CPD = OFF ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"27
+[; ;A6.c: 27:     return;
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"28
+[; ;A6.c: 28: }
+[e = _ANSEL -> -> 0 `i `uc ]
+"29
+[e = _CMCON -> -> 7 `i `uc ]
+"31
+[e = . . _TRISIObits 0 0 -> -> 1 `i `uc ]
+"32
+[e = . . _TRISIObits 0 1 -> -> 1 `i `uc ]
+"33
+[e = . . _TRISIObits 0 4 -> -> 0 `i `uc ]
+"34
+[e = . . _TRISIObits 0 5 -> -> 0 `i `uc ]
+"36
+[e = . . _GPIObits 0 0 -> -> 1 `i `uc ]
+"37
+[e = . . _GPIObits 0 1 -> -> 1 `i `uc ]
+"38
+[e = . . _GPIObits 0 4 -> -> 0 `i `uc ]
+"39
+[e = . . _GPIObits 0 5 -> -> 0 `i `uc ]
+"41
+[e :U 83 ]
+{
+"42
+[e $ ! == -> . . _GPIObits 0 0 `i -> 0 `i 85  ]
+{
+"43
+[e = . . _GPIObits 0 4 -> ~ -> . . _GPIObits 0 4 `i `uc ]
+"44
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"45
+}
+[e :U 85 ]
+"46
+[e $ ! == -> . . _GPIObits 0 1 `i -> 0 `i 86  ]
+{
+"47
+[e = . . _GPIObits 0 5 -> ~ -> . . _GPIObits 0 5 `i `uc ]
+"48
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"49
+}
+[e :U 86 ]
+"51
+}
+[e :U 82 ]
+[e $U 83  ]
+[e :U 84 ]
+"53
+[e $UE 81  ]
+"54
+[e :UE 81 ]
+}
